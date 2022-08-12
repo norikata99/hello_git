@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ド文系でもLPIC１に確実に合格する方法_.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%E3%83%89%E6%96%87%E7%B3%BB%E3%81%A7%E3%82%82lpic%EF%BC%91%E3%81%AB%E7%A2%BA%E5%AE%9F%E3%81%AB%E5%90%88%E6%A0%BC%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">ド文系でもLPIC１に確実に合格する方法</h1>
+<p>筆者のプロフィール</p>
+<ul>
+<li>高校は商業科</li>
+<li>簿記系の専門卒</li>
+<li>最近まで「サーバーてなに？」ぐらいのIT知識</li>
+<li>LPIC101,102それぞれ700/800点でパス</li>
+</ul>
+<p>ド文系でもLPIC１は合格できます。<br>
+今勉強中の方、これから勉強される方を元気づけられればと思いこの記事を書いています。<br>
+精神論多め、多くの合格体験記の一つとして参考にしていただければ幸いです。</p>
+<h3 id="%E7%9B%AE%E6%A8%99lpic101102%E3%81%AB%E5%90%84%EF%BC%91%E5%9B%9E%E3%81%A7%E5%90%88%E6%A0%BC%E3%81%99%E3%82%8B">目標：LPIC101,102に各１回で合格する</h3>
+<p><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/2779468/52d6cfe1-03f9-fbf5-95b7-85ec90df3f27.jpeg" alt="ペンギン"></p>
+<h2 id="%E3%82%8F%E3%81%8B%E3%81%A3%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84%E3%81%93%E3%81%A8">わかってほしいこと</h2>
+<h3 id="%E2%91%A0%E6%9C%80%E7%9F%AD%E5%90%88%E6%A0%BC%E6%B3%95%E3%81%A7%E3%81%AF%E3%81%AA%E3%81%84">①最短合格法ではない。</h3>
+<p>ここで紹介するのは確実に合格する方法であり、最速で合格する方法ではありません。<br>
+受験にあたって会社からの補助が限られる、または無い方が一回の受験で合格することを目指します。<br>
+ </p>
+<h3 id="%E2%91%A1%E5%88%9D%E5%AD%A6%E8%80%85%E3%83%BB%E6%9C%AA%E7%B5%8C%E9%A8%93%E8%80%85%E3%81%8C%E5%AF%BE%E8%B1%A1">②初学者・未経験者が対象</h3>
+<p>LPIC１認定を目指している<strong>業務未経験の方、linuxに興味がある方</strong>に読んでほしいです。<br>
+基本的にはLinuxに関係ない仕事をしている方を主な対象としてお話しします。<br>
+ </p>
+<h3 id="%E2%91%A2%EF%BC%91%EF%BC%90%E6%97%A5%E3%81%A7%E5%8F%97%E3%81%8B%E3%82%8B%E3%81%BF%E3%81%9F%E3%81%84%E3%81%AA%E3%82%82%E3%81%AE%E3%81%AF%E7%9C%9F%E3%81%AB%E5%8F%97%E3%81%91%E3%81%AA%E3%81%84">③「１０日で受かる」みたいなものは真に受けない</h3>
+<p>やり方自体を否定するものではありません。　　
+ただ<strong>LPICは受験料が高い</strong>ので人によってはチャレンジ回数が限られます。　　
+会社からの補助などがない人は最短を目指すより、時間をかけて確実な合格を目指すべきと考えます。<br>
+１回で合格しなければならない人はしっかり準備しましょう。近道はありません。</p>
+<p> </p>
+<h1 id="%E5%90%88%E6%A0%BC%E3%81%BE%E3%81%A7%E3%81%AE%E3%81%A0%E3%81%84%E3%81%9F%E3%81%84%E6%B5%81%E3%82%8C">合格までのだいたい流れ</h1>
+<p>以下の流れで<strong>１試験につき１ヶ月程度</strong>の時間をかければ確実に合格できます。<br>
+インプットに２〜３週間、予約から受験までの追い込みで2週間程度が現実的なラインかと思います。<br>
+合計で５０時間くらい費やせば大丈夫かと思います。毎日２時間弱くらいで賄える時間です。</p>
+<ol>
+<li><a href="#anchor1">試験範囲を確認する：重要度★</a></li>
+<li><a href="#anchor2">問題集をやりまくる（Ping-t,スピマス,Udemy）：重要度★</a></li>
+<li><a href="#anchor3">理解度が足りないものはとにかくググる。メモる：重要度★★★</a></li>
+<li><a href="#anchor4">実機を触る：重要度★</a></li>
+<li><a href="#anchor5">予約→受験：重要度★★</a></li>
+<li>101合格後、1に戻って102を始める<br>
+※重要度の高いものが筆者が語りたい項目となります。</li>
+</ol>
+<p> 
+<a id="anchor1"></a></p>
+<h3 id="%E2%91%A0%E8%A9%A6%E9%A8%93%E7%AF%84%E5%9B%B2%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E9%87%8D%E8%A6%81%E5%BA%A6%E2%98%85">①試験範囲を確認する：重要度★</h3>
+<p>LPIのHPで範囲と各項目の出題数を確認してください。<br>
+出題数→重みです。<br>
+https://www.lpi.org/our-certifications/lpic-1-overview<br>
+ </p>
+<p><a id="anchor2"></a></p>
+<h3 id="%E2%91%A1%E5%95%8F%E9%A1%8C%E9%9B%86%E3%82%92%E3%82%84%E3%82%8A%E3%81%BE%E3%81%8F%E3%82%8Bping-t%E3%82%B9%E3%83%94%E3%83%9E%E3%82%B9udemy%E9%87%8D%E8%A6%81%E5%BA%A6%E2%98%85">②問題集をやりまくる（Ping-t,スピマス,Udemy）：重要度★</h3>
+<blockquote>
+<p>重要度が低いですが問題数はこなしてなんぼです。<br>
+やって当たり前かつそれ以外語るところがないので★１にしてます。</p>
+</blockquote>
+<p> 
+まず初学者がやることはPing-tの<strong>解説を端から端まで読む</strong>ことです。<br>
+めちゃくちゃ時間かかりますが、これを避けると理解が深まりません。<br>
+問題文と選択肢を覚える暗記ゲーになってしまいます。<br>
+暗記ゲーが悪いというわけではないですが、理解ベースで進めた方が暗記分量が減って結果楽になります。
+※解説文読むのが苦痛すぎる…というかたは後述するYouTubeの講義試聴から始めるのをお勧めします。</p>
+<p> </p>
+<p>問題集は全受験者がほぼ同じものを使ってると思うので軽くまとめるだけにします。<br>
+ぶっちゃけ解く→見直すの繰り返しです。近道はない...</p>
+<p>Ping-t、101試験範囲は無料、102以降は１月2,000円程度の課金必要、基本レベルの問題<br>
+スピマス、Amazon新品2,500円くらい、模試が良き、本試験レベルの問題<br>
+<a href="https://www.udemy.com/share/1050hI3@j27yH6l9k3F1lxplQCdoMjA6GupwRPdf_FNxUd2vIyg5iGtgJTA6l5Hg8QPEwd3VPQ==/">Udemy</a>
+、101,102セットで2,440円、たまにセールあり、本試験レベルの問題、本試験の謎の日本語体験できます</p>
+<p> 
+<a id="anchor3"></a></p>
+<h3 id="%E2%91%A2%E7%90%86%E8%A7%A3%E5%BA%A6%E3%81%8C%E8%B6%B3%E3%82%8A%E3%81%AA%E3%81%84%E3%82%82%E3%81%AE%E3%81%AF%E3%81%A8%E3%81%AB%E3%81%8B%E3%81%8F%E3%82%B0%E3%82%B0%E3%82%8B%E3%83%A1%E3%83%A2%E3%82%8B%E9%87%8D%E8%A6%81%E5%BA%A6%E2%98%85%E2%98%85%E2%98%85">③理解度が足りないものはとにかくググる。メモる：重要度★★★</h3>
+<p>Ping-tだけでは理解が足りないところが必ず出てきます。<br>
+そんなときにそんな時のポイント</p>
+<blockquote>
+<p>YouTubeの講義動画を試聴する<br>
+わからないことをググる。メモる</p>
+</blockquote>
+<p> </p>
+<h3 id="youtube%E3%81%AE%E8%AC%9B%E7%BE%A9%E5%8B%95%E7%94%BB%E3%82%92%E8%A9%A6%E8%81%B4%E3%81%99%E3%82%8B">YouTubeの講義動画を試聴する</h3>
+<p>YouTubeにLPICの講義動画があります。<br>
+試聴に時間がかかってしまいますが、各項目の体系的理解につながります。<br>
+再生リストとかで纏まってないので動画を探すところから始まります。以下は自分が参考にしたものです。</p>
+<blockquote>
+<p><a href="https://www.youtube.com/playlist?%3Elist=PLg4BOtr1xQ5E2pOU-Pc-H5F6u4oUbVBzU">LPICレベル1講座 101試験編</a><br>
+qtyoshimotoさんの再生リストになります。101。各動画が短くて見やすいです。</p>
+</blockquote>
+<blockquote>
+<p><a href="https://www.youtube.com/channel/UCSDS0xSrX7ILiSL8vsxfc7A/featured">【公式】Linux Professional Institute 日本支部</a><br>
+公式ウェビナーがアーカイブされています。。各動画時間長め、平均1hくらい。<br>
+試験対策には必須じゃないけど参考になる情報多数です。とても面白いので時間があるかたは試聴をお勧めします。</p>
+</blockquote>
+<p> </p>
+<h3 id="%E3%82%8F%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E3%81%93%E3%81%A8%E3%82%92%E3%82%B0%E3%82%B0%E3%82%8B%E3%83%A1%E3%83%A2%E3%82%8B">わからないことをググる。メモる</h3>
+<p>わからないところはググってください。いっぱい出てきます。<br>
+基本的にはコマンド関係が多いかもしれないですね。<br>
+・コマンドの英語の意味<br>
+・オプションの単語</p>
+<p> 
+メモをとりましょう。iPhoneメモでもなんでも。検索機能必須<br>
+メモる内容<br>
+・わからなかったこと<br>
+・参考にしたページのURL<br>
+・得た情報<br>
+やる意義<br>
+・新しい知識は調べても忘れるのでメモっておく<br>
+・見返すときに前回の記憶を思い出すことができる。<br>
+※思い出すことが知識の定着にはいいそうです<br>
+※まとまってなくてOK、見直すときは検索する。とにかく</p>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=nbNj4d8_cMU">プログラミングメモしたら学習効率が激変しました</a><br>
+メモの取り方はこちらを参考にしました。</p>
+</blockquote>
+<p> 
+<a id="anchor4"></a></p>
+<h3 id="%E2%91%A3%E5%AE%9F%E6%A9%9F%E3%82%92%E8%A7%A6%E3%82%8B%E9%87%8D%E8%A6%81%E5%BA%A6%E2%98%85">④実機を触る：重要度★</h3>
+<p>試験対策としては必須ではないと思いました。<br>
+実際自分はAWSのEC2でlinuxサーバを立てて<code>ssh</code>でログインする。<code>man</code>でコマンドについて確認する。<br>
+くらいしかやってませんでした。</p>
+<blockquote>
+<p>以下の書籍の前半でサーバを立てる。<code>ssh</code>ログインまではできるのでやってみましょう。<br>
+<code>man</code>コマンドは試験範囲なので問題集等で確認しましょう。<br>
+<a href="https://www.amazon.co.jp/Amazon-Services-%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E3%81%AE%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E6%A7%8B%E7%AF%89-%E6%94%B9%E8%A8%823%E7%89%88/dp/4296105442/ref=sr_1_3?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;crid=X8612XLWFHWY&amp;keywords=%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E3%81%AE%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF+%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC&amp;qid=1659860174&amp;s=instant-video&amp;sprefix=%E5%9F%BA%E7%A4%8E%E3%81%8B%E3%82%89%E3%81%AE%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF+%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%2Cinstant-video%2C207&amp;sr=1-3">基礎からのネットワーク＆サーバー構築</a></p>
+</blockquote>
+<p> 
+<a id="anchor5"></a></p>
+<h3 id="%E2%91%A4%E4%BA%88%E7%B4%84%E2%86%92%E5%8F%97%E9%A8%93%E9%87%8D%E8%A6%81%E5%BA%A6%E2%98%85%E2%98%85">⑤予約→受験：重要度★★</h3>
+<p>個人的には試験予約するタイミングが非常に重要と思ったので★２としています。
+Ping-t１周後、本試験レベルでいうところの500,600点ラインの時に予約してください。Ping-t模試で言うと７割くらい？<br>
+目安としては2週間後受験する感じで<br>
+ここからスピマス・Udemyの模試をゴリゴリ回していきます。<br>
+毎日２時間ほど確保できれば各３周くらいは余裕でできます。<br>
+この間に苦手問題に集中して取り組み克服しましょう。<br>
+気合いを入れて学習に取り組んでも理解できない箇所がある場合はここで暗記ゲーに移行しましょう。<br>
+本試験で満点を獲る勢いでラストスパートかけましょう。<br>
+自分も試験３日前くらい前は紙にひたすら書くという原始的な方法をとっておりました<br>
+ここまでできれば本試験で不合格点をとることはまずないと思います。<br>
+ </p>
+<h1 id="%E6%9C%80%E5%BE%8C%E3%81%AB">最後に</h1>
+<p>仕事の合間に資格の学習をするのはとてもしんどいです。<br>
+でもがんばれば必ず報われるし、がんばった自分を誇れもします。<br>
+最初はきついですが、続けていけばどんどん楽しくなってきます。<br>
+この駄文を最後まで読めた根気でがんばっていきましょう！</p>
+<p>マークダウンの練習も兼ねて書いており読みにくいところもあるかと思います。
+最後までお読みいただきありがとうございました！</p>
+
+</body>
+</html>
