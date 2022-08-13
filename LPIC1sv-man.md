@@ -58,33 +58,34 @@
 
 ## <a id="jump-there3">Linuxコマンドを確認する</a>
   
+インスタンスの一覧を表示  
 起動したインスタンスを選択し、**接続**を押下  
-![インスタンスに接続]()  
+![インスタンスに接続](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9211-%E6%8E%A5%E7%B6%9A.png)  
 
 EC2 Instance Connect（ブラウザベースのSSH接続）を選択、**接続**を押下  
-![接続ボタン]()  
+![接続ボタン](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9212-%E6%8E%A5%E7%B6%9A%E3%83%9C%E3%82%BF%E3%83%B3.png)  
 
 ログインプロンプトを確認
-![接続ボタン]()  
+![a](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9213-%E6%8E%A5%E7%B6%9A%E3%83%9C%E3%82%BF%E3%83%B3.png)
 
 確認したいコマンドを入力、`Enter`を押下し結果を確認  
-![コマンド確認]()  
-![manページ]()  
+![コマンド確認](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9214-%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E7%A2%BA%E8%AA%8D.png)  
+![manページ](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9215-%E6%8E%A5%E7%B6%9A%E3%83%9C%E3%82%BF%E3%83%B3.png)  
 
 ***
 ■確認するポイント  
-`man cat`のように入力することで調べたいコマンドの`man`ページを参照できます。  
+`man ls`のように入力することで調べたいコマンドの`man`ページを参照できます。  
 実行できないコマンドは`yum`コマンドで適宜インストールしてください。  
 ***
 &ensp;  
 
 ## <a id="jump-there4">EC2インスタンスを終了する</a>
   
-一覧よりインスタンスを選択、`アクション`→`インスタンスの状態`→`終了`を押下  
-インスタンス、ボリュームがなくなっていることを確認  
-![インスタンス]()  
-![ボリューム]()  
-
+一覧よりインスタンスを選択、`インスタンスの状態`→`インスタンスを終了`を押下  
+終了ステータスを確認  
+![インスタンス](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9221.png)
+![ボリューム](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9222.png)
+![20220813−23.png](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9223.png)
 ***
 ■インスタンスの状態について  
 **停止**をすると、後で再起動が可能です。  
