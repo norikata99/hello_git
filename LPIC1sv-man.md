@@ -28,14 +28,14 @@
 ![起動ボタン](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9201%E3%83%BC%E8%B5%B7%E5%8B%95.png)
 
 キーペア（ログイン）-**新しいキーペア**を押下  
-![新しいキーペア]()  
+![新しいキーペア](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9202-%E6%96%B0%E3%81%97%E3%81%84%E3%82%AD%E3%83%BC%E3%83%9A%E3%82%A2.png)  
 
 キーペア名を入力、**キーペアを作成**を押下  
-![キーペアを作成]()  
+![キーペアを作成](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9203-%E6%96%B0%E3%81%97%E3%81%84%E3%82%AD%E3%83%BC%E3%83%9A%E3%82%A2.png)  
 
 鍵（LPIC1.pem）がローカルに保存される  
 **インスタンスを起動**を押下し、インスタンスが起動するまで１分ほど待つ  
-![起動中]()  
+![起動中](https://github.com/norikata99/hello_git/blob/main/img/20220813%E2%88%9204-%E6%96%B0%E3%81%97%E3%81%84%E3%82%AD%E3%83%BC%E3%83%9A%E3%82%A2.png)  
 
 一覧で**インスタンスの状態**が`running`であれば起動成功  
 
